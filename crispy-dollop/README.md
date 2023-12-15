@@ -37,6 +37,8 @@ if (i === -1) {
 }
 ```
 
+![image](https://github.com/johnlow-code/HT-Group-Coding-Assessment/assets/84949899/7729d99e-cc64-4a03-8c5d-d46bc3153e30)
+
 ### Step 3. Find the smallest digit greater than the digit found in Step 2 from the rightside of the digit.
 
 After we have found the digit, we would have to find its substitute among the digits on its right so that we can swap both of them to form the next bigger number. 
@@ -51,7 +53,8 @@ for(let j = i+1; j < number.length-1; j++ ) {
         }
 }
 ```
-  
+![image](https://github.com/johnlow-code/HT-Group-Coding-Assessment/assets/84949899/c1d0a28c-8b61-4ba0-8b08-783332c2451d)
+
 ### Step 4. Swap the positions of the two numbers
 
 Swap the positions of number at index i and "smallest".
@@ -62,6 +65,8 @@ number[i] = number[smallest];
 number[smallest] = temp;
 ```
 
+![image](https://github.com/johnlow-code/HT-Group-Coding-Assessment/assets/84949899/e5d9d68b-0d8a-4cec-9314-c4c3988fc7cc)
+
 
 ### Step 5. Sort the digits to the right of the number at index i in ascending order
 
@@ -70,6 +75,7 @@ If the number is not sorted, the resulting number might not be the smallest poss
 ```
 number = number.slice(0, i+1).concat(number.slice(i+1, number.length + 1).sort()) 
 ```
+![image](https://github.com/johnlow-code/HT-Group-Coding-Assessment/assets/84949899/4701f041-18b9-46b6-88cd-fddb398712c0)
 
 ### Step  6. Convert the list of digits back to integer and return the result
 
@@ -80,12 +86,12 @@ const result = parseInt(number.join(''), 10);
 return result;
 ```
 
-Another observation can be found in this algorithm is that the left part of the digit at index i remains untouched. This is to make sure that t
+Another observation can be found in this algorithm is that the left part of the digit at index i remains untouched. This is to make sure that the number is not only a bigger number, but also the next possible bigger number.
 
 ## Trade-offs and considerations
 
 ### 1. Handling of negative integers
-This solution does not handle negative numbers, as the algorithm is only for finding the next bigger number for positive integers. For negative integer, there needs to be an algorithm that can find the next smaller number with the digits provided.
+This solution does not handle negative numbers, as the algorithm is only for finding the next bigger number for positive integers. For negative integer, there needs to be an algorithm that can find the next smaller number with the digits provided, as the smaller the negative integer, the more positive/bigger it is.
 
 ### 2. Performance improvements
 A method is called to convert the input number to String for easier manipulation of the digits. Although this makes the code readable and simpler, it may have a slightly poorer performance compaed to a function with only numeric operations.
@@ -113,8 +119,9 @@ Step 4: Sort all of the digits to the right of the digit on index i in descendin
 
 
 ```
+## Code
 
-Below is the full code in Javascript. Alternatively, please refer to scaling-umbrella.js for the full code.
+Below is the full code in Javascript. Alternatively, please refer to crispy-dollop.js for the full code.
 
 ```
 
@@ -169,3 +176,8 @@ function main() {
 main()
 
 ```
+
+## Visualisation
+
+![image](https://github.com/johnlow-code/HT-Group-Coding-Assessment/assets/84949899/eaa239f4-3fea-4fe6-a67d-841721f67647)
+
