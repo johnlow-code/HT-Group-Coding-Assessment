@@ -21,6 +21,8 @@ The solution involves iterating over the outer layers of the array in a clockwis
 
 Starting from the first element, the function iteratively performs these four steps until all elements in the array are extracted into the result array.
 
+![image](https://github.com/johnlow-code/HT-Group-Coding-Assessment/assets/84949899/7a231456-2c75-4fff-abc3-bb55a9809dfc)
+
 ### 1. Traversing RIGHT
 
 The function pops the first row by using the shift() method. The shift()method removes the first element from an array and returns the removed element. 
@@ -142,6 +144,8 @@ Refactor the code to separate concerns and making it modular. For example, seper
 
 ### 3. Efficiency
 Explore and implement more efficient algorithms for the clockwise spiral arrangement, especially for larger arrays.
+
+## Code
 
 Below is the full code in Javascript. Alternatively, please refer to scaling-umbrella.js for the full code.
 
